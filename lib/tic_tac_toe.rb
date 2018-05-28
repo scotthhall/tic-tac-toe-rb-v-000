@@ -92,6 +92,12 @@ def winner(board)
 end
 
 def play(board)
-  turn(board)
-  over?(board)
+  until over?(board)
+    turn(board)
+  end
+  if won?(game)
+    puts "Congratulations #{current_player(board)}!"
+  else draw?(game)
+    puts "Cat's Game!"
+  end
 end
