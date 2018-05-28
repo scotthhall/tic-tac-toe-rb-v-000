@@ -92,8 +92,5 @@ def winner(board)
 end
 
 def play(board)
-  if !over?(board)
-    turn(board)
-  else play(board)
-  end
+  over?board
 end
